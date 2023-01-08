@@ -1,0 +1,4 @@
+name: moz, price: 10000, total_product: 10000
+name: alo, price: 5000, total_product: 10000
+name: asb, price: 1289, total_product: 2578
+factor_total:22578
