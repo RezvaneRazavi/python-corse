@@ -43,12 +43,13 @@ class Game(arcade.Window):
         self.doshman.draw()
 
 
-    def on_key_press(self, symbol: int, modifiers: int):
-        print("yek dokme feshar dade shod")
-        if symbol == 97: #a left
+    def on_key_press(self, symbol: int, modifiers: int): 
+        if symbol ==arcade.key.A or symbol== arcade.key.LEFT:
             self.me.center_x = self.me.center_x - self.me.speed
-        elif symbol == 100: #d right
+        elif symbol ==arcade.key.D or symbol == arcade.key.RIGHT:
             self.me.center_x = self.me.center_x + self.me.speed
+        elif symbol == arcade.key.SPACE:
+            ...
 
 
     #تابعی که بصورت اتوماتیک سریع اجرا میشه
