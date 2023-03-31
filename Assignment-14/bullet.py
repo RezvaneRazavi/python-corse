@@ -1,11 +1,11 @@
 import arcade
 
 class Bullet(arcade.Sprite):
-    def __ini__(self, host):
+    def __init__(self, host):
         super().__init__(":resources:images/space_shooter/laserRed01.png")
         self.center_x = host.center_x
         self.center_y = host.center_y
-        self.speed = 3
+        self.speed = 8
         self.change_x = 0
         self.change_y = 1
 

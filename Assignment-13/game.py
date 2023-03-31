@@ -32,7 +32,7 @@ class Game(arcade.Window):
         arcade.set_background_color(arcade.color.DARK_BLUE)
         self.background = arcade.load_texture(":resources:images/backgrounds/stars.png")
         self.me = Spaceship(self, "rezvane") 
-        self.doshman = Enemy(self.width, self.height)
+        self.enemy = Enemy(self.width, self.height)
 
 
     #نمایش
@@ -40,7 +40,7 @@ class Game(arcade.Window):
         arcade.start_render()
         arcade.draw_lrwh_rectangle_textured(0, 0, 1000, 800, self.background)
         self.me.draw()
-        self.doshman.draw()
+        self.enemy.draw()
 
 
     def on_key_press(self, symbol: int, modifiers: int): 
@@ -54,7 +54,7 @@ class Game(arcade.Window):
 
     #تابعی که بصورت اتوماتیک سریع اجرا میشه
     def on_update(self, delta_time: float):
-        self.doshman.center_y -= self.doshman.speed
+        self.enemy.center_y -= self.enemy.speed
 
  
 window = Game()
